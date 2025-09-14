@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Buy groceries",
+    "description": "Purchase milk, bread, and eggs from the supermarket.",
+    "status": false
+  },
+  {
+    "title": "Finish assignment",
+    "description": "Complete the Node.js research paper for INF656 by the due date.",
+    "status": false
+  },
+  {
+    "title": "Workout",
+    "description": "Go for a 30-minute run at the park.",
+    "status": false
+  },
+  {
+    "title": "Clean the kitchen",
+    "description": "Wash dishes, wipe counters, and take out the trash.",
+    "status": false
+  },
+  {
+    "title": "Read a book",
+    "description": "Read at least 20 pages of a programming book.",
+    "status": false
+  },
+  {
+    "title": "Do homework",
+    "description": "Complete assignment 2 of back end 2",
+    "status": true
+  }
+]
