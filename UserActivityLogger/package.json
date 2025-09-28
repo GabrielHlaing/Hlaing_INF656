@@ -1,0 +1,11 @@
+{
+  "name": "useractivitylogger",
+  "version": "1.0.0",
+  "description": "A user activity logging system that tracks interactions on a web page.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel",
+  "license": "ISC"
+}
