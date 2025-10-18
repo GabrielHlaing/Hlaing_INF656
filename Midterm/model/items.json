@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Hammer",
+    "category": "Tools",
+    "price": 12.5
+  },
+  {
+    "id": 2,
+    "name": "Screwdriver Set",
+    "category": "Tools",
+    "price": 18
+  },
+  {
+    "id": 3,
+    "name": "Electric Drill",
+    "category": "Power Tools",
+    "price": 79.99
+  },
+  {
+    "id": 4,
+    "name": "Measuring Tape",
+    "category": "Accessories",
+    "price": 6.75
+  },
+  {
+    "id": 5,
+    "name": "Wrench Set",
+    "category": "Tools",
+    "price": 24.5
+  }
+]
