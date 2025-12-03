@@ -1,0 +1,173 @@
+/* Center wrapper */
+.slot-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+/* Main slot card */
+.slot-container {
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 14px;
+  background: #1b1b1b;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Balance text */
+.balance-text {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ffd369;
+}
+
+/* Reels */
+.reels {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 25px 0;
+}
+
+.reel {
+  font-size: 42px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #242424;
+  color: #ffefef;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55), 0 0 10px rgba(255, 255, 255, 0.05) inset;
+  transition: transform 0.15s ease;
+}
+
+/* Spin animation blur */
+.reel-spin {
+  animation: spinBlur 0.5s linear infinite;
+}
+
+@keyframes spinBlur {
+  0% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  50% {
+    filter: blur(2px);
+    opacity: 0.8;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* Bet controls */
+.bet-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.bet-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  background: #444;
+  color: white;
+  border: none;
+  transition: 0.2s;
+}
+
+.bet-btn:hover:not(:disabled) {
+  background: #555;
+  transform: scale(1.1);
+}
+
+.bet-amount {
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* Spin button */
+.spin-btn {
+  width: 200px;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff9800, #ffa726);
+  color: white;
+  border: none;
+  box-shadow: 0 3px 10px rgba(255, 152, 0, 0.4);
+  transition: 0.2s;
+}
+
+.spin-btn:hover:not(:disabled) {
+  transform: scale(1.04);
+  background: linear-gradient(90deg, #ffa726, #ff9800);
+}
+
+.spin-btn:disabled {
+  opacity: 0.7;
+}
+
+/* Win message */
+.win-message {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1cd674;
+  white-space: pre-line;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.payout-rules {
+  margin-top: 25px;
+  text-align: center;
+  color: #ddd;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.payout-rules h5 {
+  color: #ffdd57;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(255, 221, 87, 0.5);
+}
+
+.payout-rules ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payout-rules li {
+  margin: 4px 0;
+  color: #ccc;
+}
+
+.payout-rules strong {
+  color: #fff;
+}

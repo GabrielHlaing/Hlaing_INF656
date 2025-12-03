@@ -1,0 +1,32 @@
+/* Page spacing */
+.leaderboard-page {
+  max-width: 900px;
+}
+
+/* Rank badge styling */
+.rank-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Highlight top 3 */
+.lb-gold {
+  background: linear-gradient(to right, #fff8d1, #fdeca6);
+}
+
+.lb-silver {
+  background: linear-gradient(to right, #f2f2f2, #e5e5e5);
+}
+
+.lb-bronze {
+  background: linear-gradient(to right, #f9e1c7, #f3d0aa);
+}
+
+/* Hover stays subtle */
+.leaderboard-table tbody tr:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+}

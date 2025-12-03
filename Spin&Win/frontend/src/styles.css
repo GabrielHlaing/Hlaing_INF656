@@ -1,0 +1,31 @@
+/* ===== full-page flex layout (global) ===== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure Angular root element fills the viewport */
+app-root,
+body,
+html {
+  height: 100%;
+}
+
+/* Make the root a column flex container so footer can be pushed down */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ensures full viewport */
+}
+
+/* The content area must grow to push footer down */
+.main-content {
+  flex: 1 0 auto; /* grow, shrink, base 0 */
+}
+
+/* Make footer stay at end of flex layout */
+app-footer {
+  margin-top: auto;
+}

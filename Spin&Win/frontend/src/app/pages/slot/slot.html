@@ -1,0 +1,46 @@
+<div class="slot-wrapper">
+  <div class="slot-container">
+    <h3 class="balance-text">
+      Balance: $<strong>{{ balance() }}</strong>
+    </h3>
+
+    <!-- Reels -->
+    <div class="reels">
+      <div class="reel" *ngFor="let r of displayReels()" [class.reel-spin]="spinning()">
+        {{ r }}
+      </div>
+    </div>
+
+    <!-- Bet Controls -->
+    <div class="bet-controls">
+      <button class="btn bet-btn" (click)="decreaseBet()" [disabled]="spinning()">−</button>
+
+      <span class="bet-amount"
+        >Bet: $<strong>{{ bet() }} </strong></span
+      >
+
+      <button class="btn bet-btn" (click)="increaseBet()" [disabled]="spinning()">+</button>
+    </div>
+
+    <!-- Spin Button -->
+    <button class="btn spin-btn mt-3" (click)="spin()" [disabled]="spinning()">
+      {{ spinning() ? 'Spinning...' : 'SPIN' }}
+    </button>
+
+    <!-- Win Message -->
+    <div class="win-message">
+      {{ winMessage() }}
+
+      <!-- Payout Rules -->
+      <div class="payout-rules mt-4">
+        <h5>Payout Rules</h5>
+        <ul>
+          <li><strong>Jackpot:</strong> 5 of a kind → <strong>10×</strong> your bet</li>
+          <li><strong>Big Win:</strong> 4 of a kind → <strong>5×</strong> your bet</li>
+          <li><strong>Small Win:</strong> 3 of a kind → <strong>3×</strong> your bet</li>
+          <li><strong>No match:</strong> Better luck next spin!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

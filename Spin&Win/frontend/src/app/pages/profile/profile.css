@@ -1,0 +1,139 @@
+/* ---------------- SECTION TITLE ---------------- */
+.section-heading {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ---------------- PROFILE CARD ENHANCEMENTS ---------------- */
+.profile-card {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: linear-gradient(135deg, #f9f9f9, #eef3ff);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(13, 110, 253, 0.35);
+}
+
+.profile-text h4 {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.profile-email {
+  margin: 0;
+  color: #666;
+  font-size: 15px;
+}
+
+/* A subtle horizontal divider between email and balance */
+.profile-balance {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+}
+
+/* ---------------- SECTION CARD IMPROVEMENT ---------------- */
+.section-card {
+  border-radius: 14px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+
+/* ---------------- RECHARGE ---------------- */
+.recharge-row {
+  display: flex;
+  gap: 12px;
+}
+
+.recharge-input {
+  flex: 1;
+}
+
+/* Keep existing button style */
+.recharge-btn {
+  white-space: nowrap;
+}
+
+/* Transaction list container */
+.trx-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Base card style */
+.trx-card {
+  border-radius: 6px;
+  padding: 14px 16px;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Top line: type + amount */
+.trx-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 600;
+}
+
+/* Result label */
+.trx-result {
+  margin: 4px 0;
+  border: 1px solid #a7a7a7;
+  font-size: 14px;
+  padding: 2px 6px;
+  background: #eeeeee;
+  border-radius: 4px;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+/* Delete button */
+.delete-btn {
+  height: 32px;
+}
+
+/* Color-coded backgrounds */
+.trx-green {
+  background: #e8f6ec;
+  border-color: #b8e2c2;
+}
+
+.trx-red {
+  background: #fde8e7;
+  border-color: #f3b4b0;
+}
+
+.trx-blue {
+  background: #e8f1fd;
+  border-color: #b8cdf3;
+}

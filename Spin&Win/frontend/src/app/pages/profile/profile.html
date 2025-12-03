@@ -1,0 +1,102 @@
+<div class="container py-4">
+  <!-- User Info -->
+  <h2 class="section-heading mb-4">Profile</h2>
+
+  <div *ngIf="loadingUser">Loading profile...</div>
+
+  <div *ngIf="user" class="profile-card card p-4 mb-4">
+    <div class="profile-header">
+      <div class="avatar">{{ user.username[0] | uppercase }}</div>
+
+      <div class="profile-text">
+        <h4 class="profile-name">{{ user.username }}</h4>
+        <p class="profile-email">{{ user.email }}</p>
+        <p class="profile-balance">
+          Balance: <strong>${{ user.balance }}</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recharge Balance -->
+  <div class="card p-4 mb-4 section-card">
+    <h5 class="section-title">Recharge Balance</h5>
+
+    <div *ngIf="rechargeMsg" class="alert alert-success py-2">{{ rechargeMsg }}</div>
+    <div *ngIf="rechargeError" class="alert alert-danger py-2">{{ rechargeError }}</div>
+
+    <div class="recharge-row">
+      <input
+        type="number"
+        class="form-control recharge-input"
+        [(ngModel)]="rechargeAmount"
+        min="1"
+        placeholder="Enter amount"
+      />
+
+      <button class="btn btn-success recharge-btn" (click)="recharge()">Recharge</button>
+    </div>
+  </div>
+
+  <!-- Change Password -->
+  <div class="card p-4 mb-4 section-card">
+    <h5 class="section-title">Change Password</h5>
+
+    <div *ngIf="passMsg" class="alert alert-success">{{ passMsg }}</div>
+    <div *ngIf="passError" class="alert alert-danger">{{ passError }}</div>
+
+    <div class="mb-3">
+      <label class="form-label fw-semibold">Old Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="oldPassword"
+        placeholder="Enter Your Old Password"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label fw-semibold">New Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="newPassword"
+        placeholder="Enter Old Password"
+      />
+    </div>
+
+    <button class="btn btn-primary w-100" (click)="changePassword()">Update Password</button>
+  </div>
+
+  <!-- Transactions -->
+  <div>
+    <h5 class="mb-3">Transaction History</h5>
+
+    <div *ngIf="loadingTrx">Loading transactions...</div>
+
+    <div *ngIf="!loadingTrx && transactions.length === 0" class="text-muted">
+      No transactions yet.
+    </div>
+
+    <div class="trx-list" *ngIf="transactions.length > 0">
+      <div class="trx-card" *ngFor="let t of transactions" [ngClass]="setTrxClass(t)">
+        <div>
+          <div class="trx-top">
+            <span class="trx-type">{{ t.type }}</span>
+            <span class="trx-amount">${{ t.amount }}</span>
+          </div>
+
+          <div *ngIf="t.result" class="trx-result">
+            {{ t.result }}
+          </div>
+
+          <small class="text-muted">{{ t.createdAt | date : 'medium' }}</small>
+        </div>
+
+        <button class="btn btn-sm btn-danger delete-btn" (click)="deleteTransaction(t._id)">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

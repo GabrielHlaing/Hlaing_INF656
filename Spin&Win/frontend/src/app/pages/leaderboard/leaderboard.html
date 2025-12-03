@@ -1,0 +1,42 @@
+<div class="container py-4 leaderboard-page">
+  <h2 class="mb-2 fw-bold">🏆 Leaderboard</h2>
+
+  <p class="text-muted mb-4">
+    Top players ranked by their total spin performance. Higher score means better luck!
+  </p>
+
+  <div *ngIf="loading" class="text-center py-4">
+    <div class="spinner-border text-primary" role="status"></div>
+  </div>
+
+  <table class="table table-hover leaderboard-table" *ngIf="!loading">
+    <thead class="table-dark">
+      <tr>
+        <th class="text-center" style="width: 90px">Rank</th>
+        <th class="text-center">User</th>
+        <th class="text-center">Total Score</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        *ngFor="let item of leaderboard; let i = index"
+        [ngClass]="{
+          'lb-gold': i === 0,
+          'lb-silver': i === 1,
+          'lb-bronze': i === 2
+        }"
+      >
+        <td class="fw-bold text-center">
+          <span class="rank-badge">{{ i + 1 }}</span>
+        </td>
+
+        <td class="fw-semibold text-center">{{ item.username }}</td>
+
+        <td class="text-center fw-semibold">
+          {{ item.totalScore }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
