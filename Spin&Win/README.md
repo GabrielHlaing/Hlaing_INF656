@@ -62,7 +62,7 @@ npm install
 
 ### 3.3 Environment Variables
 
-Create a file named **.env** inside the backend folder.
+Create a file named **.env** inside the backend folder: `Spin&Win/backend/.env`.
 
 Your `.env` file must contain:
 
@@ -142,11 +142,15 @@ All gameplay, balance updates, and records are synchronized with your backend da
 ```
 root/
 │
-├── backend/        # Node.js + Express + MongoDB API
+├── backend/             # Node.js + Express + MongoDB API
 │
-├── frontend/       # Angular application
+├── frontend/            # Angular application
 │
-└── README.md       # Project documentation
+├── User Guide.pdf/      # A brief guide to walk through the app
+|
+├── Final Report.pdf/    # Project report and reflection
+|
+└── README.md            # Project documentation
 ```
 
 ---
@@ -171,13 +175,9 @@ root/
   - Check that the token is saved in localStorage
   - Make sure your interceptor is attaching `Authorization: Bearer <token>`
 
----
-
 ## 8. License
 
 This project is submitted as part of an academic requirement and is intended for educational use.
-
----
 
 ## 9. Author
 
